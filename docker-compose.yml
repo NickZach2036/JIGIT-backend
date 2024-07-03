@@ -4,7 +4,7 @@ services:
   database:
     image: postgres:15.4
     env_file:
-      - database.env
+      - .env
     environment:
       - POSTGRES_USER=${POSTGRES_USER}
       - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}

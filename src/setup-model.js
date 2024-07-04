@@ -29,4 +29,8 @@ const User = sequelize.define(
     },
 );
 
+<<<<<<< HEAD
 export default User;  
+=======
+export default User;  
+>>>>>>> 280e6534b77ffc688cb963c7b2824215d685d873

@@ -1,5 +1,4 @@
-const sequelize = require('./sequelize');
-const User = require('./setup-model');
+import sequelize from './sequelize_setup.js';
 
 syncDatabase();
 

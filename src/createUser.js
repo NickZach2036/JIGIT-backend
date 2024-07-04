@@ -1,4 +1,4 @@
-const User = require('./setup-model');
+import User from './setup-model.js';
 
 createUser('NewUser','PaSSwoRd','useremail@gmai.com', '08tr21ta');
 

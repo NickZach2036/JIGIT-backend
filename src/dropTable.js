@@ -1,6 +1,4 @@
-const { Model } = require('sequelize');
-const User = require('./setup-model');
-const sequelize = require('./sequelize');
+import sequelize from './sequelize-setup.js';
 
 dropTable();
 async function dropTable(){

@@ -23,5 +23,3 @@ app.post('/user/generateToken', (req, res) => {
 
   res.send(token);
 });
-
-let test;

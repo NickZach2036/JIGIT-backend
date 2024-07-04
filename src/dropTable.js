@@ -1,4 +1,4 @@
-import sequelize from './sequelize-setup.js';
+import sequelize from './sequelize_setup.js';
 
 dropTable();
 async function dropTable(){

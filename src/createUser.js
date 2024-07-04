@@ -1,6 +1,6 @@
 import User from './setup-model.js';
 
-createUser('NewUser','PaSSwoRd','useremail@gmai.com', '08tr21ta');
+createUser('NewUser','PaSSwoRd','us3remail@gmai.com', '08tr21ta');
 
 async function createUser(username, password, email, carNumber) {
     try {

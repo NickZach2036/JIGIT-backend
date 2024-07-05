@@ -11,15 +11,6 @@ const users = [];
 
 app.use(json());
 
-const validateEmail = (email) => {
-  const re = /\S+@\S+\.\S+/;
-  return re.test(email);
-};
-
-const validatePassword = (password) => {
-  return password.length >= 6;
-};
-
 app.post('/register', async (req, res) => {
   const { email, password } = req.body;
 
@@ -62,3 +53,12 @@ app.post('/login', async (req, res) => {
   const token = sign({ email: user.email }, jwtSecretKey, { expiresIn: '1h' });
   res.status(200).send({ token });
 });
+
+const validateEmail = (email) => {
+  const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  return re.test(email);
+};
+
+const validatePassword = (password) => {
+  return password.length >= 6;
+};

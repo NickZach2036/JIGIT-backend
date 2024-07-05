@@ -70,7 +70,7 @@ const validateEmailOrFail = (email: string) => {
 
 const validatePasswordOrFail = (password: string) => {
   if (!validatePassword(password)) {
-    throw new Error("Password must be at least 6 characters long.");
+    throw new Error("Password must be at least 8 characters long.");
   }
 };
 

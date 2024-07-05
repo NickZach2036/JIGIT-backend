@@ -1,5 +1,5 @@
-import User from './setup-model.js';
-import sequelize from './sequelize_setup.js';
+import User from '../models/setup-model.js';
+import sequelize from '../models/sequelize_setup.js';
 import bcrypt from 'bcrypt';
 
 export async function createUser(email, password) {

@@ -1,0 +1,5 @@
+{
+  "ext": "env,yaml,js,json,ts",
+  "traceWarnings": true,
+  "ignore": ["settings.json"]
+}

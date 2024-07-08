@@ -6,7 +6,11 @@ import { validateEmailOrFail, validatePasswordOrFail } from "../utils";
 
 const users: any[] = [];
 
- const registerUser = async (req: Request, res: Response, next: NextFunction) => {
+const registerUser = async (
+  req: Request,
+  res: Response,
+  next: NextFunction
+) => {
   try {
     const { email, password } = req.body;
 
@@ -27,7 +31,7 @@ const users: any[] = [];
   }
 };
 
- const loginUser = async (req: Request, res: Response) => {
+const loginUser = async (req: Request, res: Response) => {
   const { email, password } = req.body;
 
   try {
@@ -43,14 +47,13 @@ const users: any[] = [];
       return res.status(400).send("Incorrect password.");
     }
 
-    const token = sign({ email: user.email }, jwtSecretKey, { expiresIn: "1h" });
+    const token = sign({ email: user.email }, jwtSecretKey, {
+      expiresIn: "1h",
+    });
     res.status(200).send({ token });
   } catch (error) {
     res.status(400).send(error);
   }
 };
 
-export {
-    registerUser,
-    loginUser
-}
+export { registerUser, loginUser };

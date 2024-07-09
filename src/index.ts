@@ -1,4 +1,4 @@
-import express, { NextFunction, Request, Response } from "express";
+import express, { Request, Response } from "express";
 import { config } from "dotenv";
 import { syncDatabase } from "./utils";
 import { port } from "./constants";
@@ -14,7 +14,7 @@ app.use(express.json());
 app.use(sendRes);
 app.use(userRouter);
 
-app.use((error: any, req: Request, res: Response, next: NextFunction) => {
+app.use((error: any, req: Request, res: Response) => {
   const message = error.message;
   const status = error.statusCode || 500;
   const data = error.data;

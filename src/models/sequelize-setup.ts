@@ -1,11 +1,11 @@
-import { Sequelize } from 'sequelize';
+import { Sequelize } from "sequelize";
 import {
   databasePort,
   postgresDb,
   postgresHost,
   postgresPassword,
   postgresUser,
-} from '../constants';
+} from "../constants";
 
 export const sequelize = new Sequelize({
   database: postgresDb,
@@ -13,5 +13,5 @@ export const sequelize = new Sequelize({
   password: postgresPassword,
   host: postgresHost,
   port: Number(databasePort),
-  dialect: 'postgres',
+  dialect: "postgres",
 });
